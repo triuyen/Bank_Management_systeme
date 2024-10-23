@@ -9,14 +9,15 @@ private :
 public:
     BanckAccount(std::string accountName, double
 initalBalance) : name(accountName),
-balance(initalBalance) {})
+balance(initalBalance) {}
      
     void deposit(double amount)
-{
-    if (amount > 0){
-        balance += amount;
+    {
+        if (amount > 0)
+        {
+            balance += amount;
+        }
     }
-}
 void withdraw(double amount)
 {
     if (amount <= balance)
@@ -32,7 +33,7 @@ void withdraw(double amount)
 }
 void display()
 {
-    std::count << "Account: " name << "\nBalance:"<< balance
+    std::count << "Account: " name << "\nBalance:$"<< balance std::endl;
 }
 
 };
